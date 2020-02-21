@@ -35,4 +35,26 @@ public class FindLoopTest {
         int expect = -1;
         assertThat(result, is(expect));
     }
+
+    @Test
+    public void whenFindIndexOf3() {
+        int[] input = new int[] {5, 2, 10, 2, 4};
+        int value = 2;
+        int start = 2;
+        int finish = 4;
+        int result = FindLoop.indexOfRange(input, value, start, finish);
+        int expect = 3;
+        assertThat(result, is(expect));
+    }
+
+    @Test
+    public void whenFindIndexOf2() {
+        int[] input = new int[] {15, 2, 34, 3, 4, 5, 12, 4, 4, 4};
+        int value = 34;
+        int start = 0;
+        int finish = 5;
+        int result = FindLoop.indexOfRange(input, value, start, finish);
+        int expect = 2;
+        assertThat(result, is(expect));
+    }
 }
